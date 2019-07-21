@@ -16,9 +16,12 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 	resolve: {
-		extensions: ['', '.js', '.jsx']
+		extensions: ['', '.js', '.jsx','.json'] //表示这几个文件的后缀可以省略不写
+		/*alias: { //表示别名
+			'@': path.join(__dirname,'./server') //这样@即表示项目根目录中 server这一层目录
+		}*/
 	},
-	module: {
+	module: { //所有第三方 模块的配置规则
 		loaders: loaders
 	},
 	devServer: {
